@@ -1,0 +1,9 @@
+.main-menu__list li.active a {
+    color: orange; /* Change text color */
+   
+   
+}
+
+/* .dropdown li.active {
+    background-color: rgba(255, 166, 0, 0); 
+} */
