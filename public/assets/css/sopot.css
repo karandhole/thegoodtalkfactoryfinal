@@ -560,7 +560,8 @@ a.sc-hLBbgP {
     color: var(--sopot-black);
     position: relative;
     transition: all 500ms ease;
-    font-weight: 500;
+    font-weight: 700;
+    /* font-family:sans-serif; */
 }
 
 .main-menu .main-menu__list>li>a::before,

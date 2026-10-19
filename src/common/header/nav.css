@@ -1,9 +1,11 @@
 .main-menu__list li.active a {
     color: orange; /* Change text color */
    
-   
+     font-weight: 700;
 }
-
+.main-menu__list li {
+    font-weight:700;
+}
 /* .dropdown li.active {
     background-color: rgba(255, 166, 0, 0); 
 } */
