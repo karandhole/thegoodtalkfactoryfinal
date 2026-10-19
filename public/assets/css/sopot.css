@@ -18,8 +18,9 @@
 # Common
 --------------------------------------------------------------*/
 :root {
-    --sopot-font:'Roboto', sans-serif;
+    --sopot-font:'Roboto', sans-serif;  
     --sopot-font-two: 'Roboto', sans-serif;
+    
     --sopot-gray: #3a3a3a;
     --sopot-gray-rgb: 120, 120, 120;
     --sopot-white: #ffffff;
@@ -29,6 +30,7 @@
     --sopot-base: rgb(240 209 77);
     --sopot-base-rgb: 255, 111, 15;
 }
+   
 
 .row {
     --bs-gutter-x: 30px;
@@ -2039,7 +2041,7 @@ a.sc-hLBbgP {
 .feature-one {
     position: relative;
     display: block;
-    padding: 120px 0 100px;
+    padding: 10px 0 10px;
     margin-top: 0px;
 }
 
@@ -2318,6 +2320,9 @@ a.sc-hLBbgP {
 .about-one__right-content .about-one__text1 {
     padding-bottom: 8px;
     padding-top: 8px;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
 
 }
 .about-one__right-content .about-one__text2 {
@@ -2327,6 +2332,7 @@ a.sc-hLBbgP {
 }
 .about-one__right-content .about-one__text {
     padding-bottom: 8px;
+    color: #000;
     
 
 }

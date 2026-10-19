@@ -33,7 +33,7 @@ export default class HeroThree extends React.Component {
                             <div className="row">
                                 <div className="col-xl-12">
                                     <div className="main-slider__content">
-                                        <h2>"Livee ...... Your Story by Building Conversations and Transforming Lives"</h2>
+                                        <h2>"Live Your Story by Building Conversations and Transforming Lives"</h2>
                                     </div>
                                 </div>
                             </div>

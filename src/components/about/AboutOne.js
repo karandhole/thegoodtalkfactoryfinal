@@ -31,7 +31,7 @@ export default class AboutOne extends React.Component {
                                         </div>
                                         <div className="about-one__small-img wow zoomIn animated animated" data-wow-delay="500ms"
                                             data-wow-duration="2500ms">
-                                           <a href='https://pages.razorpay.com/thegoodtalkfactoryfoundation'  target='_blank'> <img src={publicUrl + "assets/images/services/about2.jpg"} style={{ height: "150px" }} alt="" /> </a>
+                                            <a href='https://pages.razorpay.com/thegoodtalkfactoryfoundation' target='_blank'> <img src={publicUrl + "assets/images/services/about2.jpg"} style={{ height: "150px" }} alt="" /> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -44,14 +44,14 @@ export default class AboutOne extends React.Component {
 
                                         </div>
                                         <p className="about-one__text1">Who are we?</p>
+                                        <p className="about-one__text">We believe every human being has a story worth hearing, a voice worth valuing, and a place where they deserve to belong.
+                                            <p>Since 2018, The Good Talk Factory (TGTF) has been bringing people together through conversations, storytelling, education, creative expression, and community experiences that nurture empathy and inspire positive social change.</p>
+                                            <p>We create spaces where people can show up as themselves, share their experiences, discover different perspectives, and connect beyond the boundaries that often divide us.</p>
+                                            <p>Our work spans education, life skills, accessibility, inclusion, mental wellbeing, arts, culture, and community engagement. Across every initiative, one belief remains constant: everyone deserves to participate, everyone deserves to be heard, and everyone belongs.</p>
+                                            <p className="about-one__text1"> What we do?</p>
+                                        </p>
                                         <p className="about-one__text">
-                                            
-                                            The Good Talk Factory (TGTF) is a non-governmental organization (NGO) on a mission to foster positive social change through the power of conversations. Established on December 15, 2018, and officially registered as a Trust under the Indian Trusts Act, 1882, on March 17, 2023, TGTF challenges stereotypes and democratizes storytelling, ensuring that every voice matters—regardless of fame, social status, or background.
-                                            <p className="about-one__text2"> What we do?</p>
-                                           </p>
-                                           <p className="about-one__text">
-                                            Through community engagement, education, skill development, and inclusivity advocacy, TGTF empowers individuals by shifting the narrative from mainstream celebrity culture to everyday human impact. We believe in creating safe spaces for open conversations, where unheard stories are valued, and individuals are celebrated as voices of change.                                        </p>
-                                        {/* <ul className="list-unstyled about-one__points">
+                                            We help children and young people discover their strengths, develop essential life skills, build confidence, and become active participants in their communities.</p>                                        {/* <ul className="list-unstyled about-one__points">
                                             <li>
                                                 <div className="icon">
                                                     <span className="icon-comment"></span>
@@ -71,7 +71,7 @@ export default class AboutOne extends React.Component {
                                                 </div>
                                             </li>
                                         </ul> */}
-                                       
+
                                     </div>
                                 </div>
                             </div>
