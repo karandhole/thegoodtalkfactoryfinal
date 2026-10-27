@@ -12,7 +12,7 @@ const Nav = () => {
                         <Link to="/">Home</Link>
                     </li>
                     <li className={location.pathname === '/about' ? 'active' : ''}>
-                        <Link to="/about">About</Link>
+                        <Link to="/about">About Us</Link>
                     </li>
                     <li className={`dropdown ${(location.pathname.startsWith('/trustee') || location.pathname.startsWith('/coreteam') || location.pathname.startsWith('/advisor') || location.pathname === '/team') ? 'active' : ''}`}>
                         <Link to="#">Team</Link>
@@ -44,7 +44,10 @@ const Nav = () => {
                                 {/* /donation-list */}
                             </li>
                         </ul>
-                    </li>
+                    </li> 
+                    {/* <li className={location.pathname === '/' ? 'active' : ''}>
+                        <Link to="/">Our Programmes & Initiatives</Link>
+                    </li> */}
                     <li className={location.pathname === '/events' ? 'active' : ''}>
                         <Link to="/events">Events</Link>
                     </li>
