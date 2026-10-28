@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderOne from '../common/header/HeaderOne';
-// import Breadcrumb from '../common/breadcrumb/Breadcrumb';
+import Breadcrumb from '../common/breadcrumb/Breadcrumb';
 // import AboutOne from '../components/about/AboutOne';
 import CounterOne from '../components/counter/CounterOne';
 // import ProjectOne from '../components/project/ProjectOne';
@@ -20,10 +20,10 @@ const OurStory = () => {
     return (
         <>
             <HeaderOne />
-            {/* <Breadcrumb
-                heading="About Us"
-                currentPage="About"
-            /> */}
+            <Breadcrumb
+                heading="Our Story"
+                currentPage="our story"
+            />
 
             {/* <VideoOne /> */}
             <OurStory1/>

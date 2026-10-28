@@ -20,7 +20,7 @@ export default class OurStory1 extends React.Component {
         let publicUrl = process.env.PUBLIC_URL + '/'
         return (
             <>
-                <section className="about-one about-three">
+                <section className="about-one about-three" style={{paddingBottom:"20px"}}>
                     <div className="container">
                         <div className="row">
                             <div className="col-xl-6">
@@ -51,7 +51,7 @@ export default class OurStory1 extends React.Component {
                                             <p className="about-one__text1"> What becomes possible when people genuinely listen to one another?</p>
                                         </p>
                                         <p className="about-one__text">
-                                           We have seen conversations open minds, stories challenge assumptions, creative expression build confidence, and shared experiences help people discover common ground.</p>                                        {/* <ul className="list-unstyled about-one__points">
+                                            We have seen conversations open minds, stories challenge assumptions, creative expression build confidence, and shared experiences help people discover common ground.</p>                                        {/* <ul className="list-unstyled about-one__points">
                                             <li>
                                                 <div className="icon">
                                                     <span className="icon-comment"></span>
@@ -71,6 +71,31 @@ export default class OurStory1 extends React.Component {
                                                 </div>
                                             </li>
                                         </ul> */}
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section className="about-one about-three p-0">
+                    <div className="container">
+                        <div className="row">
+
+                            <div className="col-xl-12">
+                                <div className="about-one__right">
+                                    <div className="about-one__right-content">
+                                       
+                                        {/* <p className="about-one__text1">Who are we?</p> */}
+                                        <p className="about-one__text">Today, TGTF works across education, accessibility, inclusion, mental wellbeing, storytelling, arts, culture, and sustainability. Through programmes, events, and collaborations, we turn conversations into opportunities for learning, participation, and meaningful social change.                                            <p>On 15 December 2018, TGTF began its journey through Musings, creating opportunities for people to share their thoughts, experiences, and reflections. The intention was to celebrate the stories of everyday people—not only those who were already in the spotlight.</p>
+                                           </p> 
+                                            <p className="about-one__text"> The Good Talk Factory was registered as a trust on 17 March 2023, strengthening its foundation for sustained community work.</p>
+                                        
+                                        <p className="about-one__text">
+                                           Our journey continues to be shaped by the people who share their stories, the communities that welcome us, and the partners who believe in the power of collective action.</p>
 
                                     </div>
                                 </div>

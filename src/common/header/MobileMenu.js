@@ -21,8 +21,31 @@ const menuData = [
         // ],
     },
     {
-        title: 'About',
-        path: '/about',
+        // title: 'About',
+        // path: '/about',
+        title: 'About Us',
+        path: '#',
+
+        iconClosed: <CgChevronLeft />,
+        iconOpened: <CgChevronDown />,
+
+        subNav: [
+            {
+                title: 'Our Story',
+                path: '/our-story',
+                cName: 'sub-nav',
+            },
+            { 
+                title: 'Our History',
+                path: 'our-history',
+                cName: 'sub-nav',
+            },
+            { 
+                title: 'Our Values',
+                path: 'our-values',
+                cName: 'sub-nav',
+            },
+        ]
     },
 
     {
