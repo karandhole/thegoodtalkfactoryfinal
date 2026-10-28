@@ -16,6 +16,8 @@ import GalleryOne from "../components/gallery/GalleryOne";
 
 import FeatureOne from "../components/features/FeatureTwo";
 import FeatureTwo from "../components/features/FeatureOne";
+import AboutT from "../components/about/AboutT";
+import CounterOne from "../components/counter/CounterOne";
 
 const HomeThree = () => {
     return (
@@ -24,6 +26,7 @@ const HomeThree = () => {
             <HeroThree />
              <FeatureOne/>
             <AboutOne />
+            <AboutT/>
             <FeatureTwo/>
 
             <HelpPeopleOne />
@@ -40,6 +43,7 @@ const HomeThree = () => {
            
             {/* <BlogSectionThree /> */}
             {/* <ProjectOne /> */} 
+            <CounterOne/>
             <GalleryOne/>
          
             {/* <CtaOne /> */}

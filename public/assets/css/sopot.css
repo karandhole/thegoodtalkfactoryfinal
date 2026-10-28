@@ -254,6 +254,9 @@ ul {
     color: var(--sopot-base);
 }
 
+
+
+
 .bootstrap-select .dropdown-menu>li>a {
     font-size: 16px;
     font-weight: 500;
@@ -2333,6 +2336,7 @@ a.sc-hLBbgP {
 .about-one__right-content .about-one__text {
     padding-bottom: 8px;
     color: #000;
+    text-align: justify;
     
 
 }
@@ -9030,7 +9034,7 @@ a.sc-hLBbgP {
 # About Three
 --------------------------------------------------------------*/
 .about-three {
-    padding: 120px 0 120px;
+    padding: 60px 0 60px;
 }
 
 /*--------------------------------------------------------------

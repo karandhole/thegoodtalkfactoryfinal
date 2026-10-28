@@ -28,44 +28,64 @@ export default class CounterOne extends React.Component {
                         </div>
                         <div className="row">
                            
-                            <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="200ms">
-                                {/* Counter One Single */}
-                                <div className="counter-one__single">
-                                    <div className="counter-one__content">
-                                        <h3 className="odometer" data-count="5">00</h3>
-                                        <span className="counter-one__letter">+</span>
-                                        <p className="counter-one__text">Cities Impacted </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="300ms">
-                                {/* Counter One Single */}
-                                <div className="counter-one__single">
-                                    <div className="counter-one__content">
-                                        <h3 className="odometer" data-count="30">00</h3>
-                                        <span className="counter-one__letter">+</span>
-                                        <p className="counter-one__text">Events & Workshops Hosted</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="400ms">
-                                {/* Counter One Single */}
-                                <div className="counter-one__single">
-                                    <div className="counter-one__content">
-                                        <h3 className="odometer" data-count="1,00,000">00</h3>
-                                        <span className="counter-one__letter">+</span>
-                                        <p className="counter-one__text">Funds Allocated - Child Education </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="100ms">
+                            <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="200ms">
                                 {/* Counter One Single */}
                                 <div className="counter-one__single">
                                     <div className="counter-one__content">
                                         <h3 className="odometer" data-count="10,000">00</h3>
                                         <span className="counter-one__letter">+</span>
-                                        <p className="counter-one__text">Meaningful Dialogues Engaged </p>
+                                        <p className="counter-one__text">People Reached Through Storytelling and Inclusive Dialogues </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="300ms">
+                                {/* Counter One Single */}
+                                <div className="counter-one__single">
+                                    <div className="counter-one__content">
+                                        <h3 className="odometer" data-count="1,200">00</h3>
+                                        <span className="counter-one__letter">+</span>
+                                        <p className="counter-one__text">Volunteers Trained in Accessibility and Inclusion</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="400ms">
+                                {/* Counter One Single */}
+                                <div className="counter-one__single">
+                                    <div className="counter-one__content">
+                                        <h3 className="odometer" data-count="500">00</h3>
+                                        <span className="counter-one__letter">+</span>
+                                        <p className="counter-one__text">Students Impacted Through Education Initiatives </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="100ms">
+                                {/* Counter One Single */}
+                                <div className="counter-one__single">
+                                    <div className="counter-one__content">
+                                        <h3 className="odometer" data-count="200">00</h3>
+                                        <span className="counter-one__letter">+</span>
+                                        <p className="counter-one__text">Children and Youth Engaged Through Storytelling and Life Skills</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="100ms">
+                                {/* Counter One Single */}
+                                <div className="counter-one__single">
+                                    <div className="counter-one__content">
+                                        <h3 className="odometer" data-count="50">00</h3>
+                                        <span className="counter-one__letter">+</span>
+                                        <p className="counter-one__text">Workshops Conducted on Empathy, Leadership, and Inclusion</p>
+                                    </div>
+                                </div>
+                            </div>
+                             <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="100ms">
+                                {/* Counter One Single */}
+                                <div className="counter-one__single">
+                                    <div className="counter-one__content">
+                                        <h3 className="odometer" data-count="15">00</h3>
+                                        <span className="counter-one__letter">+</span>
+                                        <p className="counter-one__text">Corporate, Institutional, and CSR Collaborations</p>
                                     </div>
                                 </div>
                             </div>

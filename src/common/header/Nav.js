@@ -11,8 +11,24 @@ const Nav = () => {
                     <li className={location.pathname === '/' ? 'active' : ''}>
                         <Link to="/">Home</Link>
                     </li>
-                    <li className={location.pathname === '/about' ? 'active' : ''}>
+                    {/* <li className={location.pathname === '/about' ? 'active' : ''}>
                         <Link to="/about">About Us</Link>
+                    </li> */}
+                     <li className={`dropdown ${(location.pathname.startsWith('/our-story') || location.pathname.startsWith('/our-values') || location.pathname.startsWith('/our-journey') ) ? 'active' : ''}`}>
+                        <Link to="#">About Us</Link>
+                        <ul>
+                            <li className={location.pathname === '/our-story' ? 'active' : ''}>
+                                <Link to="/our-story">Our Story</Link>
+                            </li>
+                            <li className={location.pathname === '/our-values' ? 'active' : ''}>
+                                <Link to="/our-values">Our Values</Link>
+                            </li>
+                            <li className={location.pathname === '/our-journey' ? 'active' : ''}>
+                                <Link to="/our-journey">Our Journey</Link>  
+                            </li>
+                            
+                            
+                        </ul>
                     </li>
                     <li className={`dropdown ${(location.pathname.startsWith('/trustee') || location.pathname.startsWith('/coreteam') || location.pathname.startsWith('/advisor') || location.pathname === '/team') ? 'active' : ''}`}>
                         <Link to="#">Team</Link>
