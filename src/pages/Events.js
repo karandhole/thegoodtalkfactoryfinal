@@ -6,6 +6,7 @@ import CausesOne from '../components/causes/CausesOne';
 import FooterOne from '../common/footer/FooterOne';
 import RecentEventsThree from '../components/events/RecentEventsThree';
 import FooterTwo from '../common/footer/FooterTwo';
+import Event1 from '../components/events/event1';
 
 const Events = () => {
     return (
@@ -16,6 +17,7 @@ const Events = () => {
                 currentPage="Events" 
             />
             <RecentEventsThree />
+            <Event1/>
             {/* <CausesOne /> */}
             <FooterTwo />
         </>

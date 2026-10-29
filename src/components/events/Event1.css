@@ -1,0 +1,454 @@
+
+/* =====================================
+   RECOGNITION EVENTS
+===================================== */
+
+.recognition-events-section {
+  padding: 85px 20px;
+  background: #f7faf9;
+  color: #263b39;
+  font-family: var(--font-body), "Open Sans", sans-serif;
+}
+
+.recognition-events-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.recognition-events-header {
+  max-width: 800px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.recognition-events-eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #008577;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.recognition-events-header h2 {
+  margin: 0 0 18px;
+  color: #173f3b;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.recognition-events-header > p {
+  margin: 0;
+  color: #647572;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* Two-Column Grid */
+
+.recognition-events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 28px;
+  align-items: start;
+}
+
+/* Event Card */
+
+.recognition-event-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e2ece8;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(22, 65, 58, 0.055);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.recognition-event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(22, 65, 58, 0.11);
+}
+
+/* Slider */
+
+.recognition-event-slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #eaf2ef;
+}
+
+.recognition-event-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.recognition-event-image-count {
+  position: absolute;
+  right: 15px;
+  bottom: 14px;
+  z-index: 2;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: rgba(23, 63, 59, 0.85);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Slider Arrows */
+
+.recognition-slider-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.93);
+  color: #173f3b;
+  font-size: 15px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.recognition-slider-btn:hover {
+  background: #008577;
+  color: #ffffff;
+}
+
+.recognition-slider-btn:focus-visible,
+.recognition-slider-dot:focus-visible,
+.recognition-read-more:focus-visible {
+  outline: 3px solid #173f3b;
+  outline-offset: 3px;
+}
+
+.recognition-slider-prev {
+  left: 14px;
+}
+
+.recognition-slider-next {
+  right: 14px;
+}
+
+/* Slider Dots */
+
+.recognition-slider-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 15px 10px 0;
+}
+
+.recognition-slider-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  background: #cbdad5;
+  cursor: pointer;
+  transition: width 0.2s ease, background 0.2s ease;
+}
+
+.recognition-slider-dot.active {
+  width: 23px;
+  background: #008577;
+}
+
+/* Content */
+
+.recognition-event-content {
+  padding: 24px 27px 28px;
+}
+
+.recognition-event-number {
+  display: inline-block;
+  margin-bottom: 11px;
+  color: #008577;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.recognition-event-content h3 {
+  margin: 0 0 8px;
+  color: #173f3b;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.recognition-event-subtitle {
+  margin: 0 0 16px;
+  color: #008577;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Date and Attendance */
+
+.recognition-event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+.recognition-event-meta span {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 6px;
+  background: #eff7f4;
+  color: #47675f;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Description */
+
+.recognition-event-description p {
+  margin: 0 0 15px;
+  color: #647572;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.recognition-event-description p:last-child {
+  margin-bottom: 15px;
+}
+
+/* Focus Areas */
+
+.recognition-focus-areas {
+  margin: 24px 0;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f3f8f6;
+}
+
+.recognition-focus-areas > h4 {
+  margin: 0 0 18px;
+  color: #173f3b;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.recognition-focus-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 14px 0;
+  border-bottom: 1px solid #dfeae6;
+}
+
+.recognition-focus-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.recognition-focus-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #dcefe9;
+  color: #008577;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.recognition-focus-item h5 {
+  margin: 0 0 5px;
+  color: #234a43;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.recognition-focus-item p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Highlight Quote */
+
+.recognition-event-quote {
+  margin: 22px 0;
+  padding: 16px 18px;
+  border-left: 4px solid #008577;
+  border-radius: 0 10px 10px 0;
+  background: #eff7f4;
+  color: #234a43;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* Read More Button */
+
+.recognition-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  color: #008577;
+  font-family: var(--font-body), "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.recognition-read-more:hover {
+  color: #005f55;
+}
+
+/* Closing Section */
+
+.recognition-events-footer {
+  max-width: 850px;
+  margin: 70px auto 0;
+  padding: 40px 30px;
+  border: 1px solid #dcece7;
+  border-radius: 18px;
+  background: #edf7f4;
+  text-align: center;
+}
+
+.recognition-footer-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: #008577;
+  color: #ffffff;
+  font-size: 23px;
+}
+
+.recognition-events-footer h2 {
+  margin: 0 0 14px;
+  color: #173f3b;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+  font-size: clamp(22px, 3vw, 29px);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.recognition-events-footer p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #647572;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .recognition-events-section {
+    padding: 65px 20px;
+  }
+
+  .recognition-events-grid {
+    gap: 24px 18px;
+  }
+
+  .recognition-event-content {
+    padding: 22px;
+  }
+
+  .recognition-event-content h3 {
+    font-size: 21px;
+  }
+
+  .recognition-event-meta span {
+    font-size: 10px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .recognition-events-section {
+    padding: 48px 16px;
+  }
+
+  .recognition-events-header {
+    margin-bottom: 32px;
+  }
+
+  .recognition-events-header > p {
+    font-size: 14px;
+  }
+
+  .recognition-events-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .recognition-event-slider {
+    aspect-ratio: 4 / 3;
+  }
+
+  .recognition-event-content {
+    padding: 22px;
+  }
+
+  .recognition-event-content h3 {
+    font-size: 22px;
+  }
+
+  .recognition-events-footer {
+    margin-top: 45px;
+    padding: 30px 20px;
+  }
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .recognition-event-card,
+  .recognition-slider-btn,
+  .recognition-slider-dot {
+    transition: none;
+  }
+
+  .recognition-event-card:hover {
+    transform: none;
+  }
+}
