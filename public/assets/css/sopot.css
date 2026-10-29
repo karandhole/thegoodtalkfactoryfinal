@@ -17,9 +17,12 @@
 /*--------------------------------------------------------------
 # Common
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 :root {
     --sopot-font:'Roboto', sans-serif;  
     --sopot-font-two: 'Roboto', sans-serif;
+     /* --sopot-font: 'Marcellus', serif;
+    --sopot-font-two: 'Marcellus', serif; */
     
     --sopot-gray: #3a3a3a;
     --sopot-gray-rgb: 120, 120, 120;
@@ -9035,6 +9038,11 @@ a.sc-hLBbgP {
 --------------------------------------------------------------*/
 .about-three {
     padding: 60px 0 60px;
+}
+@media (max-width: 767px) {
+    .about-three {
+        padding: 0;
+    }
 }
 
 /*--------------------------------------------------------------
