@@ -34,9 +34,9 @@ export default class RecentEventsThree extends React.Component {
                                      
 
                                         <ul className="recent-event__text3">
-                                            <li> Donated ₹30,000 worth of masks and sanitizers to frontline workers in need.</li>
-                                            <li>Conducted multiple online mental health workshops during the pandemic</li>
-                                            <li> Provided emotional support and coping strategies through expert sessions.</li>
+                                            <li> Donated ₹30,000 worth of masks, sanitizers to frontline workers in need.</li>
+                                            <li>Conducted multiple online mental health workshops during pandemic</li>
+                                            <li> Provided emotional support & coping strategies through expert sessions.</li>
                                         </ul>
                                     </div>
                                 </div>

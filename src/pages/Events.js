@@ -13,7 +13,7 @@ const Events = () => {
         <>
             <HeaderOne />
             <Breadcrumb 
-                heading="Events"
+                heading="Events & Special Initiatives"
                 currentPage="Events" 
             />
             <RecentEventsThree />
