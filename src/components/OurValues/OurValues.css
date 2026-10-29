@@ -1,0 +1,310 @@
+/* =====================================
+   OUR VALUES SECTION
+===================================== */
+
+.our-values-section {
+    padding: 80px 0;
+    background: #f8faf9;
+}
+
+/* Section Header */
+
+.values-header {
+    max-width: 720px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.values-subtitle {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #008577;
+    font-family: var(--font-poppins), sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.values-header h2 {
+    margin: 0 0 16px;
+    color: #222;
+    font-family: var(--font-poppins), sans-serif;
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.values-header p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #666;
+    font-family: var(--font-body), sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   TIMELINE STRUCTURE
+===================================== */
+
+.values-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+/* Central Timeline Line */
+
+.values-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #cce5df;
+    transform: translateX(-50%);
+}
+
+/* Timeline Item */
+
+.values-item {
+    position: relative;
+    display: flex;
+    width: 50%;
+    margin-bottom: 38px;
+}
+
+/* Left Cards */
+
+.values-item.left {
+    justify-content: flex-end;
+    padding-right: 45px;
+}
+
+/* Right Cards */
+
+.values-item.right {
+    margin-left: 50%;
+    padding-left: 45px;
+}
+
+/* =====================================
+   NUMBERED MARKERS
+===================================== */
+
+.values-marker {
+    position: absolute;
+    top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 4px solid #f8faf9;
+    border-radius: 50%;
+    background: #008577;
+    color: #fff;
+    font-family: var(--font-poppins), sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 0 0 2px #008577;
+    z-index: 2;
+}
+
+.values-item.left .values-marker {
+    right: -21px;
+}
+
+.values-item.right .values-marker {
+    left: -21px;
+}
+
+/* =====================================
+   VALUE CARDS
+===================================== */
+
+.values-card {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border: 1px solid #e8eeeb;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Left Accent */
+
+.values-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 14px 0 0 14px;
+    background: #008577;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover Effect */
+
+.values-card:hover {
+    transform: translateY(-5px);
+    border-color: #cce5df;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+.values-card:hover::before {
+    opacity: 1;
+}
+
+/* Card Number Label */
+
+.values-card-number {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #008577;
+    font-family: var(--font-poppins), sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+/* Card Heading */
+
+.values-card h3 {
+    margin: 0 0 12px;
+    color: #222;
+    font-family: var(--font-poppins), sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Card Description */
+
+.values-card p {
+    margin: 0;
+    color: #666;
+    font-family: var(--font-body), sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   CLOSING STATEMENT
+===================================== */
+
+.values-footer {
+    max-width: 750px;
+    margin: 55px auto 0;
+    padding: 30px;
+    border-radius: 12px;
+    background: #eaf5f2;
+    text-align: center;
+}
+
+.values-footer h3 {
+    margin: 0 0 10px;
+    color: #006d61;
+    font-family: var(--font-poppins), sans-serif;
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.values-footer p {
+    margin: 0;
+    color: #52635f;
+    font-family: var(--font-body), sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   TABLET & MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 767px) {
+    .our-values-section {
+        padding: 50px 0;
+    }
+
+    .values-header {
+        margin-bottom: 40px;
+        padding: 0 15px;
+    }
+
+    /* Move Timeline Line to the Left */
+
+    .values-timeline::before {
+        left: 20px;
+    }
+
+    /* Stack All Cards Vertically */
+
+    .values-item,
+    .values-item.left,
+    .values-item.right {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 28px;
+        padding: 0 0 0 60px;
+        justify-content: flex-start;
+    }
+
+    /* Align All Markers */
+
+    .values-item.left .values-marker,
+    .values-item.right .values-marker {
+        top: 22px;
+        left: 1px;
+        right: auto;
+        width: 38px;
+        height: 38px;
+        font-size: 11px;
+    }
+
+    /* Mobile Cards */
+
+    .values-card {
+        max-width: none;
+        padding: 23px;
+    }
+
+    .values-card h3 {
+        font-size: 20px;
+    }
+
+    .values-card p {
+        font-size: 15px;
+    }
+
+    .values-footer {
+        margin-top: 35px;
+        padding: 25px 20px;
+    }
+}
+
+/* Reduce Motion for Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .values-card,
+    .values-card::before {
+        transition: none;
+    }
+
+    .values-card:hover {
+        transform: none;
+    }
+}
