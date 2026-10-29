@@ -105,7 +105,7 @@ export default class OurValues extends React.Component {
                     </div>
 
                     {/* Closing Statement */}
-                    <div className="values-footer">
+                    {/* <div className="values-footer">
                         <h3>Our Values in Action</h3>
 
                         <p>
@@ -113,7 +113,7 @@ export default class OurValues extends React.Component {
                             grows through understanding, and creates impact
                             when we act together.
                         </p>
-                    </div>
+                    </div> */}
 
                 </div>
             </section>

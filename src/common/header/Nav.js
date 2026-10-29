@@ -14,7 +14,7 @@ const Nav = () => {
                     {/* <li className={location.pathname === '/about' ? 'active' : ''}>
                         <Link to="/about">About Us</Link>
                     </li> */}
-                     <li className={`dropdown ${(location.pathname.startsWith('/our-story') || location.pathname.startsWith('/our-values') || location.pathname.startsWith('/our-journey') ) ? 'active' : ''}`}>
+                     <li className={`dropdown ${(location.pathname.startsWith('/our-story') || location.pathname.startsWith('/our-values') || location.pathname.startsWith('/our-journey')|| location.pathname.startsWith('/recognition') ) ? 'active' : ''}`}>
                         <Link to="#">About Us</Link>
                         <ul>
                             <li className={location.pathname === '/our-story' ? 'active' : ''}>
@@ -26,7 +26,10 @@ const Nav = () => {
                             <li className={location.pathname === '/our-values' ? 'active' : ''}>
                                 <Link to="/our-values">Our Values</Link>
                             </li>
-                            
+                             <li style={{textAlign:"initial"}} className={location.pathname === '/Recognition' ? 'active' : ''}>
+                                <Link to="/recognition">Recognition & Credentials</Link>
+                            </li>
+                         
                             
                             
                         </ul>

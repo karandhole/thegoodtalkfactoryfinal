@@ -38,6 +38,7 @@ import Advisor from './pages/Advisor';
 import OurStory from './pages/OurStory';
 import OurJourney from './pages/OurJourney';
 import OurValues from './pages/OurValues';
+import Recognition from './pages/Recognition';
 
 function App() {
   useEffect(() => {
@@ -57,6 +58,7 @@ function App() {
             <Route path={`${process.env.PUBLIC_URL}/our-story`} exact element={<OurStory />} />
               <Route path={`${process.env.PUBLIC_URL}/our-journey`} exact element={<OurJourney />} />
               <Route path={`${process.env.PUBLIC_URL}/our-values`} exact element={<OurValues />} />
+              <Route path={`${process.env.PUBLIC_URL}/recognition`} exact element={<Recognition />} />
             <Route path={`${process.env.PUBLIC_URL}/team`} exact element={<Team />} />
             <Route path={`${process.env.PUBLIC_URL}/trustee`} exact element={<Trustee />} />
             <Route path={`${process.env.PUBLIC_URL}/coreteam`} exact element={<CoreTeam />} />

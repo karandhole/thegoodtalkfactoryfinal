@@ -45,6 +45,11 @@ const menuData = [
                 path: 'our-values',
                 cName: 'sub-nav',
             },
+             { 
+                title: 'Recognition & Credentials',
+                path: 'recognition',
+                cName: 'sub-nav',
+            },
         ]
     },
 
