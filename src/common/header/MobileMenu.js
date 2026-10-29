@@ -117,6 +117,10 @@ const menuData = [
           
         ],
     },
+      {
+        title: 'Our Programmes & Initiatives',
+        path: '/our-programme',
+    },
 
     {
         title: 'Events',

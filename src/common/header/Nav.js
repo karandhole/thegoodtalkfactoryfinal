@@ -61,9 +61,9 @@ const Nav = () => {
                             </li>
                         </ul>
                     </li> 
-                    {/* <li className={location.pathname === '/' ? 'active' : ''}>
+                    <li className={location.pathname === '/our-programme' ? 'active' : ''}>
                         <Link to="/">Our Programmes & Initiatives</Link>
-                    </li> */}
+                    </li>
                     <li className={location.pathname === '/events' ? 'active' : ''}>
                         <Link to="/events">Events</Link>
                     </li>

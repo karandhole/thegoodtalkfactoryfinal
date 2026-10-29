@@ -123,7 +123,7 @@ ul {
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1200px;
+        max-width: 1300px;
     }
 }
 
@@ -162,7 +162,7 @@ ul {
     color: var(--sopot-white);
     font-size: 18px;
     font-weight: 600;
-    padding: 16px 40px 16px;
+    padding: 14px 40px 14px;
     transition: all .35s;
     overflow: hidden;
     border-radius: 10px;
@@ -561,7 +561,7 @@ a.sc-hLBbgP {
 
 .main-menu .main-menu__list>li>a,
 .stricky-header .main-menu__list>li>a {
-    font-size: 18px;
+    font-size: 16px;
     display: flex;
     padding-bottom: 5px;
     align-items: center;
