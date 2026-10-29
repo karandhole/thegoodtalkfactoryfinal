@@ -151,7 +151,7 @@ class Recognition1 extends Component {
           </div>
 
           {/* Closing Section */}
-          {/* <div className="recognition-footer">
+          <div className="recognition-footer">
             <span className="recognition-footer-icon" aria-hidden="true">
               ✦
             </span>
@@ -164,7 +164,7 @@ class Recognition1 extends Component {
               we continue working towards a world where learning, accessibility,
               storytelling, and inclusion are part of everyday life.
             </p>
-          </div> */}
+          </div>
         </div>
       </section>
     );

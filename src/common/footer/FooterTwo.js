@@ -92,7 +92,7 @@ export default class FooterTwo extends React.Component {
                     <div className="site-footer__bottom">
                         <div className="container">
                             <div className="site-footer__bottom-inner">
-                                <p className="site-footer__bottom-text">©2025 Website Developed & Maintained By <a href="https://azown.in">Azown Technology</a></p>
+                                <p className="site-footer__bottom-text">© The Good Talk Factory. All rights reserved.</p>
                             </div>
                         </div>
                     </div>
