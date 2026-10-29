@@ -36,18 +36,18 @@ const menuData = [
                 cName: 'sub-nav',
             },
             { 
-                title: 'Our History',
-                path: 'our-history',
+                title: 'Our Journey',
+                path: '/our-journey',
                 cName: 'sub-nav',
             },
             { 
                 title: 'Our Values',
-                path: 'our-values',
+                path: '/our-values',
                 cName: 'sub-nav',
             },
              { 
                 title: 'Recognition & Credentials',
-                path: 'recognition',
+                path: '/recognition',
                 cName: 'sub-nav',
             },
         ]
