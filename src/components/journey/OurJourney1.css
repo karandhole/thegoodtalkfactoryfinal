@@ -1,0 +1,195 @@
+/* Main Section */
+.our-journey {
+    padding: 80px 0;
+    background: #f8faf9;
+}
+
+/* Section Header */
+.journey-header {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.journey-subtitle {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #008577;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.journey-header h2 {
+    margin-bottom: 16px;
+    color: #222;
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 700;
+}
+
+.journey-header p {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Timeline Container */
+.journey-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+/* Center Timeline Line */
+.journey-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #cce5df;
+    transform: translateX(-50%);
+}
+
+/* Timeline Item */
+.journey-item {
+    position: relative;
+    display: flex;
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+/* Left Side */
+.journey-item.left {
+    justify-content: flex-end;
+    padding-right: 45px;
+}
+
+/* Right Side */
+.journey-item.right {
+    margin-left: 50%;
+    padding-left: 45px;
+}
+
+/* Timeline Dot */
+.journey-dot {
+    position: absolute;
+    top: 25px;
+    width: 16px;
+    height: 16px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    background: #008577;
+    box-shadow: 0 0 0 2px #008577;
+    z-index: 2;
+}
+
+.journey-item.left .journey-dot {
+    right: -8px;
+}
+
+.journey-item.right .journey-dot {
+    left: -8px;
+}
+
+/* Timeline Card */
+.journey-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 28px;
+    border: 1px solid #e8eeeb;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Year */
+.journey-year {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #008577;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Card Heading */
+.journey-card h3 {
+    margin: 0 0 12px;
+    color: #000000;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Card Description */
+.journey-card p {
+    margin: 0;
+    color: #121212;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 767px) {
+    .our-journey {
+        padding: 50px 0;
+    }
+
+    .journey-header {
+        margin-bottom: 40px;
+        padding: 0 15px;
+    }
+
+    .journey-timeline::before {
+        left: 10px;
+    }
+
+    .journey-item,
+    .journey-item.left,
+    .journey-item.right {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 30px;
+        padding-right: 0;
+        padding-left: 40px;
+        justify-content: flex-start;
+    }
+
+    .journey-item.left .journey-dot,
+    .journey-item.right .journey-dot {
+        top: 25px;
+        left: 2px;
+        right: auto;
+    }
+
+    .journey-card {
+        max-width: none;
+        padding: 22px;
+    }
+
+    .journey-card h3 {
+        font-size: 20px;
+    }
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .journey-card {
+        transition: none;
+    }
+
+    .journey-card:hover {
+        transform: none;
+    }
+}

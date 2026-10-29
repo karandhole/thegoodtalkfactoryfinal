@@ -20,12 +20,13 @@ const Nav = () => {
                             <li className={location.pathname === '/our-story' ? 'active' : ''}>
                                 <Link to="/our-story">Our Story</Link>
                             </li>
-                            <li className={location.pathname === '/our-values' ? 'active' : ''}>
-                                <Link to="/our-values">Our Values</Link>
-                            </li>
                             <li className={location.pathname === '/our-journey' ? 'active' : ''}>
                                 <Link to="/our-journey">Our Journey</Link>  
                             </li>
+                            <li className={location.pathname === '/our-values' ? 'active' : ''}>
+                                <Link to="/our-values">Our Values</Link>
+                            </li>
+                            
                             
                             
                         </ul>

@@ -36,6 +36,7 @@ import Trustee from './pages/Trustees';
 import CoreTeam from './pages/CoreTeam';
 import Advisor from './pages/Advisor';
 import OurStory from './pages/OurStory';
+import OurJourney from './pages/OurJourney';
 
 function App() {
   useEffect(() => {
@@ -53,6 +54,7 @@ function App() {
             <Route path={`${process.env.PUBLIC_URL}/home-three`} exact element={<HomeThree />} /> */}
             <Route path={`${process.env.PUBLIC_URL}/about`} exact element={<About />} />
             <Route path={`${process.env.PUBLIC_URL}/our-story`} exact element={<OurStory />} />
+              <Route path={`${process.env.PUBLIC_URL}/our-journey`} exact element={<OurJourney />} />
             <Route path={`${process.env.PUBLIC_URL}/team`} exact element={<Team />} />
             <Route path={`${process.env.PUBLIC_URL}/trustee`} exact element={<Trustee />} />
             <Route path={`${process.env.PUBLIC_URL}/coreteam`} exact element={<CoreTeam />} />
