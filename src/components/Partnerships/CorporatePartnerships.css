@@ -1,0 +1,759 @@
+
+/* =====================================
+   BRAND COLORS
+===================================== */
+
+:root {
+  --brand-color: rgb(240, 209, 77);
+  --brand-dark: rgb(190, 158, 30);
+  --brand-light: rgb(255, 244, 190);
+  --text-dark: #242424;
+  --text-muted: #68645a;
+  --background-light: #fffdf5;
+  --white: #ffffff;
+  --border-color: #eee8d4;
+}
+
+
+/* =====================================
+   MAIN SECTION
+===================================== */
+
+.corporate-section {
+  width: 100%;
+  padding: 65px 5%;
+  background: #fffdf5;
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.corporate-container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.corporate-hero {
+  position: relative;
+  min-height: 420px;
+  padding: 65px 7%;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+    120deg,
+    #242424,
+    #393326 65%,
+    #514728
+  );
+  color: #fff;
+}
+
+.corporate-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.corporate-eyebrow {
+  display: inline-block;
+  color: var(--brand-color);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 22px;
+}
+
+.corporate-hero h1 {
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.12;
+  font-weight: 800;
+  margin-bottom: 22px;
+  color: #fff;
+}
+
+.corporate-hero h1 span {
+  display: block;
+  color: var(--brand-color);
+}
+
+.corporate-hero-content p {
+  max-width: 580px;
+  color: #e9e5d9;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.corporate-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 24px;
+  background: var(--brand-color);
+  color: #242424;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.corporate-hero-btn:hover {
+  background: var(--brand-dark);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.corporate-hero-btn span {
+  font-size: 19px;
+}
+
+
+/* =====================================
+   HERO DECORATION
+===================================== */
+
+.corporate-hero-decoration {
+  position: relative;
+  width: 340px;
+  height: 320px;
+  flex-shrink: 0;
+}
+
+.corporate-circle {
+  position: absolute;
+  border: 1px solid rgba(240, 209, 77, 0.35);
+  border-radius: 50%;
+}
+
+.circle-one {
+  width: 300px;
+  height: 300px;
+  top: 10px;
+  left: 20px;
+}
+
+.circle-two {
+  width: 235px;
+  height: 235px;
+  top: 42px;
+  left: 52px;
+}
+
+.circle-three {
+  width: 165px;
+  height: 165px;
+  top: 77px;
+  left: 87px;
+  background: rgba(240, 209, 77, 0.12);
+}
+
+.corporate-hero-symbol {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.corporate-hero-symbol span {
+  color: var(--brand-color);
+  font-size: 38px;
+}
+
+.corporate-hero-symbol p {
+  color: #e9dfb9;
+  font-size: 10px;
+  letter-spacing: 4px;
+  margin: 8px 0;
+}
+
+.corporate-hero-symbol h3 {
+  color: #fff;
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+
+/* =====================================
+   INTRODUCTION
+===================================== */
+
+.corporate-intro {
+  max-width: 850px;
+  margin: 90px auto 85px;
+  text-align: center;
+}
+
+.corporate-small-label {
+  display: inline-block;
+  color: var(--brand-dark);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 2.5px;
+  margin-bottom: 15px;
+}
+
+.corporate-intro h2 {
+  color: var(--text-dark);
+  font-size: 36px;
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+.corporate-intro h2 span {
+  color: var(--brand-dark);
+}
+
+.corporate-intro p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 2;
+}
+
+
+/* =====================================
+   CARD SECTION HEADER
+===================================== */
+
+.corporate-card-heading {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.corporate-card-heading h2 {
+  color: var(--text-dark);
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.corporate-card-heading p {
+  color: #77736a;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* =====================================
+   COLLABORATION GRID
+===================================== */
+
+.corporate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+}
+
+.corporate-card {
+  position: relative;
+  padding: 27px;
+  min-height: 270px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(50, 43, 20, 0.045);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.corporate-card::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 0;
+  left: 0;
+  top: 0;
+  background: var(--brand-color);
+  transition: height 0.35s ease;
+}
+
+.corporate-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 32px rgba(50, 43, 20, 0.11);
+}
+
+.corporate-card:hover::before {
+  height: 100%;
+}
+
+.corporate-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.corporate-card-number {
+  color: #aaa18a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.corporate-card-icon {
+  width: 53px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-light);
+  color: #51431a;
+  font-size: 25px;
+  border-radius: 14px;
+  transition: 0.3s ease;
+}
+
+.corporate-card:hover .corporate-card-icon {
+  background: var(--brand-color);
+  color: #242424;
+  transform: rotate(-5deg);
+}
+
+.corporate-card h3 {
+  color: var(--text-dark);
+  font-size: 19px;
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.corporate-card p {
+  color: #77736a;
+  font-size: 13px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+.corporate-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #f0ebdc;
+}
+
+.corporate-card-bottom > span:first-child {
+  color: #65531a;
+  background: var(--brand-light);
+  padding: 7px 11px;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.corporate-card-arrow {
+  color: var(--brand-dark);
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.corporate-card:hover .corporate-card-arrow {
+  transform: translate(3px, -3px);
+}
+
+
+/* =====================================
+   PARTNER HIGHLIGHT
+===================================== */
+
+.corporate-partner-section {
+  margin-top: 100px;
+  padding: 55px 7%;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 35px;
+  border-radius: 20px;
+  background: #fff5ce;
+}
+
+.corporate-partner-content h2 {
+  color: var(--text-dark);
+  font-size: 34px;
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+.corporate-partner-content h2 span {
+  color: var(--brand-dark);
+}
+
+.corporate-partner-content p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.95;
+  margin-bottom: 25px;
+}
+
+.corporate-partner-content strong {
+  color: var(--text-dark);
+}
+
+.corporate-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #66531a;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.corporate-text-link span {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.corporate-text-link:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =====================================
+   PARTNER VISUAL
+===================================== */
+
+.corporate-partner-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 270px;
+}
+
+.partner-visual-circle {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: linear-gradient(
+    145deg,
+    var(--brand-color),
+    #f7e9a6
+  );
+  color: #242424;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(100, 80, 20, 0.15);
+  border: 8px solid rgba(255, 255, 255, 0.65);
+}
+
+.partner-visual-circle span {
+  font-size: 34px;
+  color: #51431a;
+  margin-bottom: 12px;
+}
+
+.partner-visual-circle h3 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.partner-visual-circle p {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  margin-top: 12px;
+  color: #51431a;
+}
+
+
+/* =====================================
+   STAKEHOLDERS
+===================================== */
+
+.corporate-stakeholders {
+  margin-top: 95px;
+  text-align: center;
+}
+
+.corporate-stakeholders h2 {
+  color: var(--text-dark);
+  font-size: 29px;
+  margin-bottom: 30px;
+}
+
+.stakeholder-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.stakeholder-list span {
+  padding: 13px 20px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  color: #51431a;
+  font-size: 12px;
+  font-weight: 650;
+  transition: 0.3s ease;
+}
+
+.stakeholder-list span:hover {
+  background: var(--brand-color);
+  color: #242424;
+  border-color: var(--brand-color);
+}
+
+
+/* =====================================
+   FINAL CTA
+===================================== */
+
+.corporate-cta {
+  margin-top: 95px;
+  padding: 65px 25px;
+  text-align: center;
+  border-radius: 22px;
+  background: linear-gradient(
+    125deg,
+    #242424,
+    #393326,
+    #514728
+  );
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.corporate-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: auto;
+}
+
+.corporate-cta-icon {
+  display: block;
+  color: var(--brand-color);
+  font-size: 35px;
+  margin-bottom: 14px;
+}
+
+.corporate-cta .corporate-small-label {
+  color: var(--brand-color);
+}
+
+.corporate-cta h2 {
+  color: #fff;
+  font-size: 38px;
+  margin-bottom: 18px;
+}
+
+.corporate-cta p {
+  color: #e9e5d9;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+
+.corporate-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 25px;
+  border-radius: 7px;
+  background: var(--brand-color);
+  color: #242424;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.corporate-cta-btn:hover {
+  background: var(--brand-dark);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.corporate-cta-btn span {
+  font-size: 19px;
+}
+
+.corporate-cta-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e9dfb9;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 1024px) {
+
+  .corporate-hero {
+    padding: 50px 5%;
+  }
+
+  .corporate-hero-decoration {
+    transform: scale(0.8);
+    transform-origin: center right;
+    margin-left: -35px;
+  }
+
+  .corporate-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .corporate-partner-section {
+    padding: 40px;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+
+  .corporate-section {
+    padding: 40px 5%;
+  }
+
+  .corporate-hero {
+    min-height: auto;
+    padding: 48px 25px;
+    border-radius: 17px;
+  }
+
+  .corporate-hero-decoration {
+    display: none;
+  }
+
+  .corporate-hero h1 {
+    font-size: 38px;
+  }
+
+  .corporate-hero-content p {
+    font-size: 13px;
+  }
+
+  .corporate-intro {
+    margin: 60px auto;
+  }
+
+  .corporate-intro h2 {
+    font-size: 28px;
+  }
+
+  .corporate-intro p {
+    font-size: 13px;
+  }
+
+  .corporate-card-heading h2 {
+    font-size: 27px;
+  }
+
+  .corporate-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .corporate-card {
+    min-height: 240px;
+    padding: 23px;
+  }
+
+  .corporate-partner-section {
+    margin-top: 65px;
+    padding: 32px 23px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .corporate-partner-content h2 {
+    font-size: 28px;
+  }
+
+  .corporate-partner-content p {
+    font-size: 13px;
+  }
+
+  .corporate-partner-visual {
+    min-height: 220px;
+  }
+
+  .partner-visual-circle {
+    width: 205px;
+    height: 205px;
+  }
+
+  .corporate-stakeholders {
+    margin-top: 65px;
+  }
+
+  .corporate-stakeholders h2 {
+    font-size: 25px;
+  }
+
+  .stakeholder-list {
+    gap: 9px;
+  }
+
+  .stakeholder-list span {
+    padding: 11px 14px;
+    font-size: 11px;
+  }
+
+  .corporate-cta {
+    margin-top: 65px;
+    padding: 45px 22px;
+  }
+
+  .corporate-cta h2 {
+    font-size: 29px;
+  }
+
+  .corporate-cta p {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 400px) {
+
+  .corporate-hero h1 {
+    font-size: 32px;
+  }
+
+  .corporate-intro h2 {
+    font-size: 25px;
+  }
+
+  .corporate-card h3 {
+    font-size: 17px;
+  }
+
+  .corporate-cta h2 {
+    font-size: 25px;
+  }
+
+}

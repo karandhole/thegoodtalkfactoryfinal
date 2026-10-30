@@ -40,6 +40,7 @@ import OurJourney from './pages/OurJourney';
 import OurValues from './pages/OurValues';
 import Recognition from './pages/Recognition';
 import OurProgramme from './pages/OurProgramme';
+import Partnerships from './pages/Partnerships';
 
 function App() {
   useEffect(() => {
@@ -75,6 +76,7 @@ function App() {
             <Route path={`${process.env.PUBLIC_URL}/donation-details`} exact element={<DonationDetails />} />
             <Route path={`${process.env.PUBLIC_URL}/donate-now`} exact element={<DonateNow />} />
             <Route path={`${process.env.PUBLIC_URL}/Events`} exact element={<Events />} />
+              <Route path={`${process.env.PUBLIC_URL}/partnerships`} exact element={<Partnerships />} />
             {/* <Route path={`${process.env.PUBLIC_URL}/blog-v-1`} exact element={<BlogVersionOne />} />
             <Route path={`${process.env.PUBLIC_URL}/blog-v-2`} exact element={<BlogVersionTwo />} />
             <Route path={`${process.env.PUBLIC_URL}/blog-sidebar`} exact element={<BlogSidebar />} />
