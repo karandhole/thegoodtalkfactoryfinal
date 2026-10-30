@@ -50,7 +50,7 @@ export default class FooterTwo extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                                <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                                     <div className="footer-widget__column footer-widget__service clearfix">
                                         <h3 className="footer-widget__title">Initiatives</h3>
                                         <ul className="footer-widget__service-list list-unstyled clearfix">
@@ -73,7 +73,7 @@ export default class FooterTwo extends React.Component {
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                                <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                                     <div className="footer-widget__column footer-widget__map clearfix">
                                         <h3 className="footer-widget__title">Our Maps</h3>
                                         <div className="footer-widget__map-box">
