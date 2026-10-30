@@ -55,7 +55,7 @@ export default class FooterTwo extends React.Component {
                                         <h3 className="footer-widget__title">Initiatives</h3>
                                         <ul className="footer-widget__service-list list-unstyled clearfix">
                                             <li><Link to={process.env.PUBLIC_URL + `/about`}>Core Principles</Link></li>
-                                            <li><Link to={process.env.PUBLIC_URL + `/about`}>Project</Link></li>
+                                            <li><Link to={process.env.PUBLIC_URL + `/media`}>Media & Press Coverage</Link></li>
                                             <li><Link to={process.env.PUBLIC_URL + `/partnerships`}>Corporate & CSR Partnerships</Link></li>
                                             {/* <li><Link to={process.env.PUBLIC_URL + `/about`}>Core values</Link></li>
                                             <li><Link to={process.env.PUBLIC_URL + `/projects`}>Our projects</Link></li> */}
