@@ -9,10 +9,10 @@ const DonateNow = () => {
     return (
         <>
             <HeaderOne />
-            <Breadcrumb 
+            {/* <Breadcrumb 
                 heading="Donate Now"
                 currentPage="Donate Now" 
-            />
+            /> */}
             <DonateOne />
             <FooterTwo />
         </>
