@@ -72,10 +72,10 @@ const menuData = [
                 cName: 'sub-nav',
             },
             
-            {
-                title: 'Advisor',
-                path: '/advisor',
-            },
+            // {
+            //     title: 'Advisor',
+            //     path: '/advisor',
+            // },
             {
                 title: 'Volunteer & Interns',
                 path: '/team',
@@ -144,7 +144,7 @@ const menuData = [
     // },
     
     {
-        title: 'Contact',
+        title: 'Contact Us',
         path: '/contact',
     },
 ];

@@ -43,9 +43,9 @@ const Nav = () => {
                             <li className={location.pathname === '/coreteam' ? 'active' : ''}>
                                 <Link to="/coreteam">Core Team</Link>
                             </li>
-                            <li className={location.pathname === '/advisor' ? 'active' : ''}>
+                            {/* <li className={location.pathname === '/advisor' ? 'active' : ''}>
                                 <Link to="/advisor">Advisors</Link>  
-                            </li>
+                            </li> */}
                             <li className={location.pathname === '/team' ? 'active' : ''}>
                                 <Link to="/team">Volunteer & Interns</Link>
                             </li>
