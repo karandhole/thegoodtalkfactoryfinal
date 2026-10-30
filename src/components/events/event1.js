@@ -16,10 +16,10 @@ class Event1 extends Component {
       participants: "500+ Participants",
       images: [
         "assets/images/project/k1.jpg",
-        "assets/images/project/k2.jpg",
-        "assets/images/project/k3.jpg",
-        "assets/images/project/k4.jpg",
-        "assets/images/project/k5.jpg",
+        "assets/images/project/k2.JPG",
+        "assets/images/project/k3.JPG",
+        "assets/images/project/k4.JPG",
+        "assets/images/project/k5.JPG",
        
       ],
       paragraphs: [
