@@ -12,9 +12,13 @@ class OurProgramme1 extends Component {
       description:
         "Project TGTF Vidya goes beyond textbooks and examinations by creating opportunities for young people to develop self-awareness, communication, confidence, emotional intelligence, leadership and essential life skills.",
       images: [
-        "/images/vidya1.jpg",
-        "/images/vidya2.jpg",
-        "/images/vidya3.jpg",
+        "assets/images/project/programme/p1.jpg",
+        "assets/images/project/programme/p2.jpg",
+        "assets/images/project/programme/p3.jpg",
+        "assets/images/project/programme/p4.jpg",
+        "assets/images/project/programme/p5.jpg",
+        "assets/images/project/programme/p6.jpg",
+      
       ],
       tag: "Youth Empowerment",
     },
