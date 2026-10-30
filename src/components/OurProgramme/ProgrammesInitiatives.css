@@ -1,0 +1,486 @@
+
+/* =====================================
+   MAIN SECTION
+===================================== */
+
+.programmes-section {
+  width: 100%;
+  padding: 75px 5%;
+  background: #f8f7fb;
+  font-family: inherit;
+}
+
+.programmes-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+/* =====================================
+   SECTION HEADER
+===================================== */
+
+.programmes-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 55px;
+}
+
+.programmes-eyebrow {
+  display: inline-block;
+  color: #8a55a8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.programmes-header h1 {
+  color: #993415;
+  font-size: 38px;
+  font-weight: 750;
+  margin-bottom: 12px;
+}
+
+.programmes-header h2 {
+  color: #80519b;
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.programmes-header p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.programmes-header-line {
+  width: 75px;
+  height: 4px;
+  background: #9b6abb;
+  border-radius: 10px;
+  margin: 25px auto 0;
+}
+
+
+/* =====================================
+   PROGRAMMES GRID
+===================================== */
+
+.programmes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+
+/* =====================================
+   PROGRAMME CARD
+===================================== */
+
+.programme-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee8f3;
+  box-shadow: 0 5px 22px rgba(73, 36, 108, 0.07);
+  transition: all 0.3s ease;
+}
+
+.programme-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 30px rgba(73, 36, 108, 0.13);
+}
+
+
+/* =====================================
+   IMAGE SLIDER
+===================================== */
+
+.programme-slider {
+  position: relative;
+  width: 100%;
+  height: 235px;
+  overflow: hidden;
+  background: #f3edf8;
+  flex-shrink: 0;
+}
+
+.programme-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.4s ease, transform 0.5s ease;
+}
+
+.programme-image.image-loaded {
+  opacity: 1;
+}
+
+.programme-image.image-loading {
+  opacity: 0;
+}
+
+.programme-card:hover .programme-image.image-loaded {
+  transform: scale(1.04);
+}
+
+
+/* =====================================
+   IMAGE LOADER
+===================================== */
+
+.programme-image-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #f3edf8;
+  color: #70418e;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.programme-spinner {
+  width: 38px;
+  height: 38px;
+  border: 4px solid #dfd1e9;
+  border-top: 4px solid #70418e;
+  border-radius: 50%;
+  animation: programme-spin 0.8s linear infinite;
+}
+
+@keyframes programme-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =====================================
+   IMAGE ERROR
+===================================== */
+
+.programme-image-error {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f3edf8;
+  color: #70418e;
+  gap: 8px;
+}
+
+.programme-image-error span {
+  font-size: 32px;
+}
+
+.programme-image-error p {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =====================================
+   PROGRAMME NUMBER
+===================================== */
+
+.programme-number {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 3;
+  background: rgba(73, 36, 108, 0.9);
+  color: white;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+
+/* =====================================
+   SLIDER BUTTONS
+===================================== */
+
+.programme-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #993415;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.programme-slider-btn:hover {
+  background: #993415;
+  color: white;
+}
+
+.programme-slider-btn.prev {
+  left: 12px;
+}
+
+.programme-slider-btn.next {
+  right: 12px;
+}
+
+
+/* =====================================
+   SLIDER DOTS
+===================================== */
+
+.programme-slider-dots {
+  position: absolute;
+  bottom: 13px;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.programme-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.programme-dot.active {
+  background: white;
+  transform: scale(1.4);
+}
+
+
+/* =====================================
+   CIRCULAR IMAGE COUNTER
+===================================== */
+
+.programme-image-counter {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 5;
+
+  width: 48px;
+  height: 30px;
+
+  border-radius: 50%;
+  background: rgba(155, 55, 8, 0.821);
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+  backdrop-filter: blur(5px);
+}
+
+.counter-divider {
+  opacity: 0.7;
+  font-size: 11px;
+}
+
+
+/* =====================================
+   PROGRAMME CONTENT
+===================================== */
+
+.programme-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.programme-category {
+  color: #9362ae;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.programme-content h3 {
+  color: #651b05;
+  font-size: 21px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.programme-content h4 {
+  color: #8b63a0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 13px;
+}
+
+.programme-content p {
+  color: #666;
+  font-size: 13.5px;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+
+/* =====================================
+   CARD BOTTOM TAG
+===================================== */
+
+.programme-card-bottom {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #eee8f3;
+}
+
+.programme-tag {
+  display: inline-block;
+  background: #f3edf8;
+  color: #70418e;
+  padding: 7px 13px;
+  font-size: 11px;
+  font-weight: 650;
+  border-radius: 20px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.programmes-footer {
+  text-align: center;
+  max-width: 800px;
+  margin: 75px auto 0;
+}
+
+.programmes-footer-icon {
+  color: #9565ae;
+  font-size: 30px;
+}
+
+.programmes-footer h2 {
+  color: #993415;
+  font-size: 27px;
+  margin: 15px 0;
+}
+
+.programmes-footer p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 1024px) {
+
+  .programmes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .programmes-header h1 {
+    font-size: 32px;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 600px) {
+
+  .programmes-section {
+    padding: 50px 5%;
+  }
+
+  .programmes-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .programmes-header {
+    margin-bottom: 35px;
+  }
+
+  .programmes-header h1 {
+    font-size: 27px;
+  }
+
+  .programmes-header h2 {
+    font-size: 17px;
+  }
+
+  .programmes-header p {
+    font-size: 14px;
+  }
+
+  .programme-slider {
+    height: 220px;
+  }
+
+  .programme-content {
+    padding: 21px;
+  }
+
+  .programme-content h3 {
+    font-size: 20px;
+  }
+
+  .programmes-footer {
+    margin-top: 50px;
+  }
+
+  .programmes-footer h2 {
+    font-size: 23px;
+  }
+
+}
