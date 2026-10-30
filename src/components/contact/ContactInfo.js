@@ -137,7 +137,7 @@ class ContactInfo extends Component {
               >
 
                 <div className="contact-info-icon">
-                  &#128247;
+                &#xf16d;
                 </div>
 
                 <div>
