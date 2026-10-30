@@ -137,7 +137,7 @@ class ContactInfo extends Component {
               >
 
                 <div className="contact-info-icon">
-                &#xf16d;
+                <i className="fab fa-instagram"></i>
                 </div>
 
                 <div>
