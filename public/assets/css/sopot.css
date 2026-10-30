@@ -2176,6 +2176,10 @@ a.sc-hLBbgP {
 .feature-one__text {
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
+     padding-bottom: 8px;
+    color: #000;
+    text-align: justify;
+    line-height: 28px;
 }
 
 /* .feature-one__single:hover .feature-one__text {
@@ -2340,7 +2344,7 @@ a.sc-hLBbgP {
     padding-bottom: 8px;
     color: #000;
     text-align: justify;
-    
+    line-height: 28px;
 
 }
 

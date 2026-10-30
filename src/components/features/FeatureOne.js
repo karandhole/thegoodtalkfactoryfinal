@@ -1,53 +1,114 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./FeatureTwo.css";
 
 export default class FeatureTwo extends React.Component {
-    render(){
+    render() {
+        const featureGroups = [
+            {
+                id: 1,
+                icon: "icon-donation-1",
+                title: "Inclusion & Accessibility",
+                description:
+                    "We create opportunities for people with diverse abilities, identities, backgrounds, and experiences to participate, connect, and belong.",
+                areas: [
+                    {
+                        title: "Storytelling, Arts & Culture",
+                        description:
+                            "We use stories, music, art, and creative experiences to celebrate individuality, encourage expression, and build connections.",
+                    },
+                ],
+            },
+            {
+                id: 2,
+                icon: "icon-heart",
+                title: "Mental Health & Wellbeing",
+                description:
+                    "We encourage open conversations, emotional awareness, empathy, and supportive spaces where people can express themselves without fear of judgment.",
+                areas: [
+                    {
+                        title: "Student Engagement & Innovation",
+                        description:
+                            "We engage young people in exploring real-world challenges, thinking creatively, and developing ideas that contribute to a more inclusive society.",
+                    },
+                    // {
+                    //     title: "Sustainability & Community Engagement",
+                    //     description:
+                    //         "We bring communities together through experiences that encourage learning, collaboration, and social and environmental responsibility.",
+                    // },
+                ],
+            },
+        ];
+
         return (
-            <>
-                <section className="feature-one">
-                    <div className="container">
-                        <div className="row">
+            <section className="feature-two-section">
+                <div className="container">
+              
 
-                            <div className="col-xl-12 col-lg-12 p-2 wow fadeInLeft" data-wow-delay="100ms">
-                                {/* Feature One Single */}
-                                <div className="feature-one__single">
-                                    <div className="feature-one__top">
-                                        <div className="feature-one__icon">
-                                            <span className="icon-donation-1"></span>
-                                        </div>
-                                        <h3 className="feature-one__title"><Link to={process.env.PUBLIC_URL + `/about`}>Inclusion & Accessibility</Link></h3>
+                    <div className="feature-two-grid">
+                        {featureGroups.map((feature) => (
+                            <article
+                                className="feature-two-card"
+                                key={feature.id}
+                            >
+                                <div className="feature-two-card-header">
+                                    <div className="feature-two-icon">
+                                        <span className={feature.icon}></span>
                                     </div>
-                                    
-                                    <p className="feature-one__text">We create opportunities for people with diverse abilities, identities, backgrounds, and experiences to participate, connect, and belong.</p>
-                                <h6>Storytelling, Arts & Culture</h6>
-                                <p className="feature-one__text">We use stories, music, art, and creative experiences to celebrate individuality, encourage expression, and build connections.</p>
-                                </div>
-                            </div>
 
-                            <div className="col-xl-12 col-lg-12 p-2 wow fadeInUp" data-wow-delay="200ms">
-                                {/* Feature One Single */}
-                                <div className="feature-one__single">
-                                    <div className="feature-one__top">
-                                        <div className="feature-one__icon">
-                                            <span className="icon-heart"></span>
+                                    {/* <span className="feature-two-number">
+                                        0{feature.id}
+                                    </span> */}
+                                </div>
+
+                                <h3 className="feature-two-title">
+                                    <Link
+                                        to={
+                                            process.env.PUBLIC_URL + "/about"
+                                        }
+                                    >
+                                        {feature.title}
+                                    </Link>
+                                </h3>
+
+                                <p className="feature-two-description">
+                                    {feature.description}
+                                </p>
+
+                                <div className="feature-two-divider"></div>
+
+                                <div className="feature-two-areas">
+                                    {feature.areas.map((area) => (
+                                        <div
+                                            className="feature-two-area"
+                                            key={area.title}
+                                        >
+                                            <span className="feature-two-area-icon">
+                                                <span className="icon-check"></span>
+                                            </span>
+
+                                            <div>
+                                                <h4>{area.title}</h4>
+                                                <p>{area.description}</p>
+                                            </div>
                                         </div>
-                                        <h3 className="feature-one__title"><Link to={process.env.PUBLIC_URL + `/about`}>Mental Health & Wellbeing</Link></h3>
-                                    </div>
-                                    <p className="feature-one__text">We encourage open conversations, emotional awareness, empathy, and supportive spaces where people can express themselves without fear of judgment.</p>
-                                <h6>Student Engagement & Innovation</h6>
-                                <p className="feature-one__text">We engage young people in exploring real-world challenges, thinking creatively, and developing ideas that contribute to a more inclusive society.</p>
-                                <h6>Sustainability & Community Engagement</h6>
-                                <p className="feature-one__text">We bring communities together through experiences that encourage learning, collaboration, and social and environmental responsibility.</p>
+                                    ))}
                                 </div>
-                            </div>
 
-                            
-
-                        </div>
+                                <Link
+                                    className="feature-two-link"
+                                    to={
+                                        process.env.PUBLIC_URL + "/about"
+                                    }
+                                >
+                                    Learn More
+                                    <span aria-hidden="true"> →</span>
+                                </Link>
+                            </article>
+                        ))}
                     </div>
-                </section>
-            </>
-        )
+                </div>
+            </section>
+        );
     }
 }
