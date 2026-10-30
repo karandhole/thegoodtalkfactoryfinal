@@ -76,7 +76,7 @@ const Nav = () => {
                         
                     </li> */}
                     <li className={location.pathname === '/contact' ? 'active' : ''}>
-                        <Link to="/contact">Contact</Link>
+                        <Link to="/contact">Contact Us</Link>
                     </li>
                 </ul>
             </nav>

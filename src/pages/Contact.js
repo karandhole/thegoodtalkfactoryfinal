@@ -15,8 +15,8 @@ const Contact = () => {
                 heading="Contact Us"
                 currentPage="Contact" 
             />
-            <ContactForm />
-            {/* <ContactInfo /> */}
+            {/* <ContactForm /> */}
+            <ContactInfo />
             {/* <ContactMap /> */}
             <FooterTwo />
         </>
