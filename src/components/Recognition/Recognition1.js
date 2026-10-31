@@ -152,9 +152,7 @@ class Recognition1 extends Component {
 
           {/* Closing Section */}
           <div className="recognition-footer">
-            <span className="recognition-footer-icon" aria-hidden="true">
-              ✦
-            </span>
+         
 
             <h2>Every Milestone Has a Community Behind It</h2>
 
