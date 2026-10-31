@@ -271,7 +271,7 @@ class Partnerships1 extends Component {
 
             <div className="corporate-cta-content">
 
-              <span className="corporate-cta-icon">✦</span>
+              <span className="corporate-cta-icon">💡</span>
 
               <span className="corporate-small-label">
                 HAVE AN IDEA?

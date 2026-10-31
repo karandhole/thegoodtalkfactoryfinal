@@ -2,6 +2,8 @@
 /* =====================================
    BRAND COLORS
 ===================================== */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+  
 
 :root {
   --brand-color: rgb(240, 209, 77);
@@ -64,7 +66,7 @@
 .corporate-eyebrow {
   display: inline-block;
   color: var(--brand-color);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
   margin-bottom: 22px;
@@ -76,6 +78,7 @@
   font-weight: 800;
   margin-bottom: 22px;
   color: #fff;
+  font-family:'Marcellus', serif;
 }
 
 .corporate-hero h1 span {
@@ -208,6 +211,7 @@
   font-size: 36px;
   line-height: 1.35;
   margin-bottom: 20px;
+  
 }
 
 .corporate-intro h2 span {
@@ -552,6 +556,7 @@
   color: #fff;
   font-size: 38px;
   margin-bottom: 18px;
+  font-family:'Marcellus', serif;
 }
 
 .corporate-cta p {

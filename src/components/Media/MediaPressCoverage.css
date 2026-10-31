@@ -2,13 +2,14 @@
 /* =====================================
    BRAND COLORS
 ===================================== */
-
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+  
 :root {
   --media-brand: rgb(240, 209, 77);
   --media-brand-dark: rgb(190, 158, 30);
   --media-brand-light: rgb(255, 244, 190);
-  --media-dark: #242424;
-  --media-muted: #68645a;
+  --media-dark: #100f0f;
+  --media-muted: #292722;
   --media-cream: #fffdf5;
   --media-border: #eee8d4;
 }
@@ -75,6 +76,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 22px;
+    font-family:'Marcellus', serif;
 }
 
 .media-hero h1 span {
@@ -209,7 +211,7 @@
 .media-section-label {
   display: inline-block;
   color: var(--media-brand-dark);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 750;
   letter-spacing: 2.5px;
   margin-bottom: 16px;
@@ -220,6 +222,7 @@
   font-size: 36px;
   line-height: 1.35;
   margin-bottom: 20px;
+    font-family:'Marcellus', serif;
 }
 
 .media-intro h2 span {
@@ -259,6 +262,7 @@
   font-weight: 750;
   letter-spacing: 1.5px;
   margin-bottom: 20px;
+    font-family:'Marcellus', serif;
 }
 
 .media-featured-content h2 {
@@ -266,6 +270,7 @@
   font-size: 38px;
   line-height: 1.3;
   margin-bottom: 17px;
+    font-family:'Marcellus', serif;
 }
 
 .media-featured-content h2 span {
@@ -589,6 +594,7 @@
   font-size: 36px;
   line-height: 1.35;
   margin-bottom: 18px;
+    font-family:'Marcellus', serif;
 }
 
 .media-closing h2 span {
