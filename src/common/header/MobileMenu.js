@@ -1,306 +1,313 @@
-import React, { useState } from 'react';
-import * as AiIcons from 'react-icons/ai';
-import { AiOutlineBars } from 'react-icons/ai';
-import { CgChevronDown, CgChevronLeft } from 'react-icons/cg';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import {
+  AiOutlineBars,
+  AiOutlineClose,
+  AiOutlineHeart,
+  AiOutlineMail,
+  AiOutlinePhone,
+  AiOutlineInstagram,
+  AiOutlineLinkedin,
+  AiOutlineRight,
+} from "react-icons/ai";
+import { CgChevronDown } from "react-icons/cg";
+import "./MobileMenu.css";
 
 const menuData = [
-    {
-        title: 'Home',
-        path: '/',
-        iconClosed: <CgChevronLeft />,
-        iconOpened: <CgChevronDown />,
+  { title: "Home", path: "/" },
 
-        // subNav: [
-            
-        //     {
-        //         title: 'Home',
-        //         path: '/',
-        //     },
-        // ],
-    },
-    {
-        // title: 'About',
-        // path: '/about',
-        title: 'About Us',
-        path: '#',
+  {
+    title: "About Us",
+    path: "#",
+    subNav: [
+      { title: "Our Story", path: "/our-story" },
+      { title: "Our Journey", path: "/our-journey" },
+      { title: "Our Values", path: "/our-values" },
+      { title: "Recognition & Credentials", path: "/recognition" },
+    ],
+  },
 
-        iconClosed: <CgChevronLeft />,
-        iconOpened: <CgChevronDown />,
+  {
+    title: "Team",
+    path: "#",
+    subNav: [
+      { title: "Trustees", path: "/Trustee" },
+      { title: "Core Team", path: "/coreteam" },
+      { title: "Volunteer & Interns", path: "/team" },
+    ],
+  },
 
-        subNav: [
-            {
-                title: 'Our Story',
-                path: '/our-story',
-                cName: 'sub-nav',
-            },
-            { 
-                title: 'Our Journey',
-                path: '/our-journey',
-                cName: 'sub-nav',
-            },
-            { 
-                title: 'Our Values',
-                path: '/our-values',
-                cName: 'sub-nav',
-            },
-             { 
-                title: 'Recognition & Credentials',
-                path: '/recognition',
-                cName: 'sub-nav',
-            },
-        ]
-    },
+  {
+    title: "Donation",
+    path: "#",
+    subNav: [
+      { title: "Donate Now", path: "/donate-now" },
+    ],
+  },
 
-    {
-        title: 'Team',
-        path: '#',
-
-        iconClosed: <CgChevronLeft />,
-        iconOpened: <CgChevronDown />,
-
-        subNav: [
-            {
-                title: 'Trustees',
-                path: '/Trustee',
-                cName: 'sub-nav',
-            },
-            { 
-                title: 'Core Team',
-                path: 'coreteam',
-                cName: 'sub-nav',
-            },
-            
-            // {
-            //     title: 'Advisor',
-            //     path: '/advisor',
-            // },
-            {
-                title: 'Volunteer & Interns',
-                path: '/team',
-            },
-            // {
-            //     title: 'Gallery',
-            //     path: '/gallery',
-            // },
-            // {
-            //     title: '404 Error',
-            //     path: '/error',
-            // },
-        ],
-    },
-
-    {
-        title: 'Donation',
-        path: '#',
-
-        iconClosed: <CgChevronLeft />,
-        iconOpened: <CgChevronDown />,
-
-        subNav: [
-            
-            {
-                title: 'Donate Now',
-                path: '/donate-now',
-            },
-            
-            // {
-            //     title: 'Donation',
-            //     path: '/donation',
-            //     cName: 'sub-nav',
-            // },
-            // {
-            //     title: 'Donation List',
-            //     path: '/donation-list',
-            //     cName: 'sub-nav',
-            // },
-            // {
-            //     title: 'Donation Details',
-            //     path: '/donation-details',
-            // },
-          
-        ],
-    },
-      {
-        title: 'Our Programmes & Initiatives',
-        path: '/our-programme',
-    },
-
-    {
-        title: 'Events',
-        path: '/events',
-    },
-
-
-    // {
-    //     title: 'Blog',
-    //     path: '/',
-
-    //     iconClosed: <CgChevronLeft />,
-    //     iconOpened: <CgChevronDown />,
-
-        
-    // },
-    
-    {
-        title: 'Contact Us',
-        path: '/contact',
-    },
+  { title: "Our Programmes & Initiatives", path: "/our-programme" },
+  { title: "Events", path: "/events" },
+  { title: "Contact Us", path: "/contact" },
 ];
 
-const SidebarLink = styled(Link)`
-    display: flex;
-    color: #fff;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    list-style: none;
-    height: 50px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 400;
-    &:hover {
-        background: #ff6f0f;
-        color: #fff;
-        cursor: pointer;
-    }
+const SidebarNav = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px;
+  max-width: 88vw;
+  height: 100vh;
+  height: 100dvh;
+  background: #fffdf6;
+  overflow-y: auto;
+  z-index: 10001;
+  transform: translateX(${({ sidebar }) => sidebar ? "0" : "-105%"});
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.18, 1);
+  box-shadow: 10px 0 40px rgba(0,0,0,0.12);
+
+  @media(max-width: 480px) {
+    width: 320px;
+  }
+    @media (min-width: 992px) {
+  display: none;
+}
 `;
 
-const SidebarLabel = styled.span`
-    margin-left: 16px;
-    color: #fff;
-    font-weight: 400;
+const SidebarLink = styled.button`
+  width: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 8px;
+  color: #29291f;
+  font-size: 15px;
+  font-weight: 650;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid #eeeadd;
+  transition: 0.25s;
+
+  &:hover {
+    color: #a18417;
+    padding-left: 14px;
+  }
+`;
+
+const MenuItemLink = styled(Link)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8px;
+  color: #29291f;
+  font-size: 15px;
+  font-weight: 650;
+  text-decoration: none;
+  border-bottom: 1px solid #eeeadd;
+
+  &:hover {
+    color: #a18417;
+  }
 `;
 
 const DropdownLink = styled(Link)`
-    height: 60px;
-    padding-left: 3rem;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    &:hover,
-    &:active {
-        background: #ff6f0f;
-        cursor: pointer;
-        color: #fff;
-    }
+  display: block;
+  padding: 12px 15px 12px 25px;
+  color: #181818;
+  text-decoration: none;
+  font-size: 14px;
+  border-left: 2px solid #f0d14d;
+  margin: 5px 0 5px 10px;
+  transition: 0.2s;
+  font-weight:600;
+
+  &:hover {
+    background: #fff4c7;
+    color: #8b7013;
+  }
 `;
 
-const SubMenu = ({ item }) => {
-    const [subnav, setSubnav] = useState(false);
+const SubMenu = ({ item, closeSidebar }) => {
+  const [subnav, setSubnav] = useState(false);
 
-    const showSubnav = () => setSubnav(!subnav);
-
+  if (!item.subNav) {
     return (
-        <>
-            <SidebarLink to={process.env.PUBLIC_URL + `${item.path}`} onClick={item.subNav && showSubnav}>
-                <div>
-                    {item.icon}
-                    <SidebarLabel>{item.title}</SidebarLabel>
-                </div>
-                <div>
-                    {item.subNav && subnav ? item.iconOpened : item.subNav ? item.iconClosed : null}
-                </div>
-            </SidebarLink>
-            {subnav &&
-                item.subNav.map((data, index) => (
-                    <DropdownLink to={process.env.PUBLIC_URL + `${data.path}`} key={index}>
-                        {item.icon}
-                        <SidebarLabel>{data.title}</SidebarLabel>
-                    </DropdownLink>
-                ))}
-        </>
+      <MenuItemLink to={process.env.PUBLIC_URL + item.path} onClick={closeSidebar}>
+        {item.title}
+        <AiOutlineRight size={15} />
+      </MenuItemLink>
     );
+  }
+
+  return (
+    <div>
+      <SidebarLink
+        onClick={() => setSubnav(!subnav)}
+        aria-expanded={subnav}
+      >
+        {item.title}
+        <CgChevronDown
+          className={subnav ? "tg-chevron-open" : ""}
+          size={19}
+        />
+      </SidebarLink>
+
+      <div className={`tg-submenu ${subnav ? "tg-submenu-open" : ""}`}>
+        {item.subNav.map((data, index) => (
+          <DropdownLink
+            key={index}
+            to={process.env.PUBLIC_URL + data.path}
+            onClick={closeSidebar}
+          >
+            {data.title}
+          </DropdownLink>
+        ))}
+      </div>
+    </div>
+  );
 };
 
-const NavIcon = styled(Link)`
-    color: #ff6f0f;
-    font-size: 2rem;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    margin-left: 200px;
-`;
-
-const SidebarNav = styled.nav`
-    background-color: #001d23;
-    width: 300px;
-    height: 100%;
-    position: fixed;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    -webkit-scroll-behavior: smooth;
-    box-shadow: 0 13px 35px -12px rgba(35, 35, 35, 0.15);
-    top: 0;
-    left:0;
-    left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
-    transition: 350ms;
-    z-index: 99999;
-`;
-
-const SidebarWrap = styled.div`
-    width: 100%;
-`;
-
 const MobileMenu = () => {
-    const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(false);
 
-    const showSidebar = () => setSidebar(!sidebar);
-    let publicUrl = process.env.PUBLIC_URL+'/'
+  const showSidebar = () => setSidebar(true);
+  const closeSidebar = () => setSidebar(false);
 
-    return (
-        <>
-            <>
-                <NavIcon to="#" style={{ justifyContent: 'flex-end' }}>
-                    <AiOutlineBars onClick={showSidebar} />
-                </NavIcon>
+  const publicUrl = process.env.PUBLIC_URL + "/";
 
-                <SidebarNav sidebar={sidebar}>
-                    <SidebarWrap>
-                        <div className="mobile-nav__content">
-                            <div className="logo-box">
-                                <Link to={process.env.PUBLIC_URL + `/`} aria-label="logo image"><img src={publicUrl+"assets/images/resources/logo1.jpg"} style={{width:"80px",height:"80px"}} alt="" /></Link>
-                            </div>
-                            <NavIcon to="#">
-                                <AiIcons.AiOutlineClose
-                                    style={{
-                                        color: 'white',
-                                        fontSize: '18px',
-                                        justifyContent: 'flex-start',
-                                    }}
-                                    onClick={showSidebar}
-                                />
-                            </NavIcon>
-                            {menuData.map((item, index) => (
-                                <SubMenu item={item} key={index} />
-                            ))}
-                            <ul className="mobile-nav__contact list-unstyled">
-                                <li>
-                                    <i className="fa fa-envelope" aria-hidden="true"></i>
-                                    <a href="mailto: thegoodtalkfactory@gmail.com"> thegoodtalkfactory@gmail.com</a>
-                                </li>
-                                <li>
-                                    <i className="fa fa-phone" aria-hidden="true"></i>
-                                    <a href="tel:+914035576553">+914035576553</a>
-                                </li>
-                            </ul>
-                            <div className="mobile-nav__top">
-                                <div className="mobile-nav__social">
-                                    <a href="https://www.linkedin.com/company/thegoodtalkfactory-foundation/about/?viewAsMember=true">  <i class="fab fa-linkedin"></i></a>
-                                    {/* <a href="https://facebook.com/"><span className="fab fa-facebook-square"></span></a>
-                                    <a href="https://pinterest.com/"><span className="fab fa-pinterest-p"></span></a> */}
-                                    <a href="https://www.instagram.com/thegoodtalkfactory?igsh=bWYzMmZzYTY2azky" target='_blank'><span className="fab fa-instagram"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </SidebarWrap>
-                </SidebarNav>
-            </>
-        </>
-    );
+  useEffect(() => {
+    document.body.style.overflow = sidebar ? "hidden" : "";
+
+    const handleEscape = (e) => {
+      if (e.key === "Escape") closeSidebar();
+    };
+
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, [sidebar]);
+
+  return (
+    <>
+      {/* Menu Button */}
+      <button
+        className="tg-menu-trigger"
+        onClick={showSidebar}
+        aria-label="Open navigation menu"
+      >
+        <AiOutlineBars />
+      </button>
+
+      {/* Overlay */}
+      <div
+        className={`tg-menu-overlay ${sidebar ? "active" : ""}`}
+        onClick={closeSidebar}
+      />
+
+      {/* Sidebar */}
+      <SidebarNav sidebar={sidebar}>
+        <div className="tg-mobile-content">
+
+          {/* Header */}
+          <div className="tg-mobile-header">
+            <Link to="/" onClick={closeSidebar}>
+              <img
+                src={publicUrl + "assets/images/resources/logo1.jpg"}
+                alt="The Good Talk Factory"
+              />
+            </Link>
+
+            <button
+              className="tg-close-btn"
+              onClick={closeSidebar}
+              aria-label="Close menu"
+            >
+              <AiOutlineClose />
+            </button>
+          </div>
+
+          {/* Welcome */}
+          <div className="tg-menu-welcome">
+            <span>WELCOME TO TGTF</span>
+            <h3>Let's create a world of possibilities.</h3>
+          </div>
+
+          {/* Navigation */}
+          <nav className="tg-menu-navigation">
+            {menuData.map((item, index) => (
+              <SubMenu
+                item={item}
+                key={index}
+                closeSidebar={closeSidebar}
+              />
+            ))}
+          </nav>
+
+          {/* Donate */}
+          <a
+            href="https://pages.razorpay.com/thegoodtalkfactoryfoundation"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tg-menu-donate"
+          >
+            <AiOutlineHeart />
+            <span>Support Our Cause</span>
+            <AiOutlineRight />
+          </a>
+
+          {/* Contact */}
+          <div className="tg-menu-contact">
+            <span className="tg-menu-label">GET IN TOUCH</span>
+
+            <a href="mailto:thegoodtalkfactory@gmail.com">
+              <AiOutlineMail />
+              thegoodtalkfactory@gmail.com
+            </a>
+
+            <a href="tel:+914035576553">
+              <AiOutlinePhone />
+              +91 40 3557 6553
+            </a>
+          </div>
+
+          {/* Social */}
+          <div className="tg-menu-social">
+            <span className="tg-menu-label">FOLLOW OUR JOURNEY</span>
+
+            <div>
+              <a
+                href="https://www.linkedin.com/company/thegoodtalkfactory-foundation/about/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <AiOutlineLinkedin />
+              </a>
+
+              <a
+                href="https://www.instagram.com/thegoodtalkfactory?igsh=bWYzMmZzYTY2azky"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <AiOutlineInstagram />
+              </a>
+            </div>
+          </div>
+
+          <div className="tg-menu-footer">
+            Together, we make a difference. 
+          </div>
+
+        </div>
+      </SidebarNav>
+    </>
+  );
 };
 
 export default MobileMenu;
