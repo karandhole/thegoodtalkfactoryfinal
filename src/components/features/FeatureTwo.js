@@ -1,5 +1,6 @@
 import React from "react";
 import "./FeatureOne.css";
+import { MdUpdate } from "react-icons/md";
 
 export default class FeatureOne extends React.Component {
   constructor(props) {
@@ -87,7 +88,7 @@ export default class FeatureOne extends React.Component {
 
                 <div className="updates-bottom">
                   <span>Making a difference, together.</span>
-                  <span className="updates-star">✦</span>
+                  <span className="updates-star"><MdUpdate /></span>
                 </div>
               </div>
             </div>
