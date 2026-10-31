@@ -1,74 +1,129 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./FeatureOne.css";
 
 export default class FeatureOne extends React.Component {
-    render() {
-        let publicUrl = process.env.PUBLIC_URL + '/';
-        return (
-            <section className="feature-two" style={{ textAlign: 'center' }}>
-                <div className="container">
-                    <div className="section-title text-center">
-                        <h2 className="section-title__title">Updates</h2>
-                    </div>
-                    <div className="row justify-content-center align-items-center">
-                        <div className="col-xl-6 col-lg-6">
-                            <div className="feature-two__single" style={{ boxShadow: 'none', transition: 'none' }}>
-                                <div className="feature-two__img" style={{ marginBottom: '20px' }}>
-                                    <img
-                                        src={publicUrl + "assets/images/gallery/update1.jpg"}
-                                        alt=""
-                                        style={{ width: '100%', height: 'auto', display: 'block', margin: '0 auto' }}
-                                    />
-                                </div>
-                                <div className="feature-two__content">
-                                
-                                    <p className="feature-two__text" style={{ marginTop: '10px', color:'black' }}>
-                                        TGTF wins CSR Summit's best initiative in the category Child Education for Project TGTF Vidya.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+  constructor(props) {
+    super(props);
+    this.state = { activeIndex: 0 };
+  }
 
+  updates = [
+    {
+      image: "assets/images/gallery/update1.jpg",
+      category: "Recognition & Impact",
+      title: "A Milestone Worth Celebrating!",
+      description:
+        "TGTF wins CSR Summit's Best Initiative Award in the Child Education category for Project TGTF Vidya. This recognition inspires us to continue creating opportunities and making education more accessible.",
+      badge: "🏆 Achievement",
+    },
+     {
+      image: "assets/images/gallery/update1.jpg",
+      category: "Recognition & Impact",
+      title: "A Milestone Worth Celebrating!",
+      description:
+        "TGTF wins CSR Summit's Best Initiative Award in the Child Education category for Project TGTF Vidya. This recognition inspires us to continue creating opportunities and making education more accessible.",
+      badge: "🏆 Achievement",
+    },
 
-                        {/* <div className="col-xl-4 col-lg-4">
-                            <div className="feature-two__single" style={{ boxShadow: 'none', transition: 'none' }}>
-                                <div className="feature-two__img" style={{ marginBottom: '20px' }}>
-                                    <img
-                                        src={publicUrl + "assets/images/gallery/update1.jpg"}
-                                        alt=""
-                                        style={{ width: '100%', height: 'auto', display: 'block', margin: '0 auto' }}
-                                    />
-                                </div>
-                                <div className="feature-two__content">
-                                
-                                    <p className="feature-two__text" style={{ marginTop: '10px', color:'black' }}>
-                                        TGTF wins CSR Summit's best initiative in the category Child Education for Project TGTF Vidya.
-                                    </p>
-                                </div>
-                            </div>
-                        </div> */}
+    // Add future updates here:
+    // {
+    //   image: "assets/images/gallery/update2.jpg",
+    //   category: "Community & Events",
+    //   title: "Your Update Title",
+    //   description: "Your update description here.",
+    //   badge: "✨ Latest Update",
+    // },
+  ];
 
+  nextSlide = () => {
+    this.setState((prev) => ({
+      activeIndex: (prev.activeIndex + 1) % this.updates.length,
+    }));
+  };
 
-                        {/* <div className="col-xl-4 col-lg-4">
-                            <div className="feature-two__single" style={{ boxShadow: 'none', transition: 'none' }}>
-                                <div className="feature-two__img" style={{ marginBottom: '20px' }}>
-                                    <img
-                                        src={publicUrl + "assets/images/gallery/update1.jpg"}
-                                        alt=""
-                                        style={{ width: '100%', height: 'auto', display: 'block', margin: '0 auto' }}
-                                    />
-                                </div>
-                                <div className="feature-two__content">
-                                
-                                    <p className="feature-two__text" style={{ marginTop: '10px', color:'black' }}>
-                                        TGTF wins CSR Summit's best initiative in the category Child Education for Project TGTF Vidya.
-                                    </p>
-                                </div>
-                            </div>
-                        </div> */}
-                    </div>
+  prevSlide = () => {
+    this.setState((prev) => ({
+      activeIndex:
+        (prev.activeIndex - 1 + this.updates.length) % this.updates.length,
+    }));
+  };
+
+  render() {
+    const publicUrl = process.env.PUBLIC_URL + "/";
+    const update = this.updates[this.state.activeIndex];
+
+    return (
+      <section className="updates-section">
+        <div className="container">
+
+          <div className="updates-heading">
+           
+            <h2>Latest <span>Updates</span></h2>
+            <p>
+              Every milestone tells a story. Explore the moments that inspire
+              us to keep creating change.
+            </p>
+          </div>
+
+          <div className="updates-slider">
+
+            <div className="updates-card" key={this.state.activeIndex}>
+              <div className="updates-image">
+                <img
+                  src={publicUrl + update.image}
+                  alt={update.title}
+                />
+                <span className="updates-badge">{update.badge}</span>
+              </div>
+
+              <div className="updates-content">
+                <span className="updates-category">
+                  {update.category}
+                </span>
+
+                <h3>{update.title}</h3>
+
+                <p>{update.description}</p>
+
+                <div className="updates-bottom">
+                  <span>Making a difference, together.</span>
+                  <span className="updates-star">✦</span>
                 </div>
-            </section>
-        );
-    }
+              </div>
+            </div>
+
+            {this.updates.length > 1 && (
+              <div className="updates-navigation">
+                <button onClick={this.prevSlide} aria-label="Previous update">
+                  &#8592;
+                </button>
+
+                <div className="updates-dots">
+                  {this.updates.map((item, index) => (
+                    <button
+                      key={index}
+                      className={this.state.activeIndex === index ? "active" : ""}
+                      onClick={() => this.setState({ activeIndex: index })}
+                      aria-label={`Go to update ${index + 1}`}
+                    />
+                  ))}
+                </div>
+
+                <button onClick={this.nextSlide} aria-label="Next update">
+                  &#8594;
+                </button>
+              </div>
+            )}
+
+            <div className="updates-count">
+              {String(this.state.activeIndex + 1).padStart(2, "0")}
+              <span> / </span>
+              {String(this.updates.length).padStart(2, "0")}
+            </div>
+
+          </div>
+        </div>
+      </section>
+    );
+  }
 }
